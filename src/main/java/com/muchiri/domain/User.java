@@ -15,7 +15,7 @@ public class User {
         this.roles = roles;
     }
 
-    // This juust example. Load user from the database
+    // This just example. Load user from the database
     public static User findByUsername(String username) {
         String user = "user", admin = "admin";
         String uPassword = "upassword", aPassword = "apassword";

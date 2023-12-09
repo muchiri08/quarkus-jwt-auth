@@ -13,7 +13,7 @@ public interface TokenUtil {
     // Excluding things like expirationTime etc in this for simplicity
     public static String generateToken(String username, Set<Role> roles) {
         Set<String> rStrings = roles.stream()
-                .map(role -> role.name()).collect(Collectors.toSet());
+                .map(role -> role.toString()).collect(Collectors.toSet());
 
         String token = Jwt.issuer("com.muchiri")
                 .upn(username).groups(rStrings).sign();
